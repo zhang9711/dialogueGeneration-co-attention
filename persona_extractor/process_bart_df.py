@@ -5,6 +5,7 @@ import random
 from transformers import BartTokenizer
 import pandas as pd
 
+# A new line 
 datatype = ['test', 'train', 'valid']
 tokenizer = BartTokenizer.from_pretrained('facebook/bart-base')
 for name in datatype:
@@ -49,3 +50,4 @@ for name in datatype:
         'persona': [i['persona'] for i in tmp_data]
     })
     tmp_df.to_csv(f"{name}.csv")
+
